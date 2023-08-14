@@ -19,7 +19,7 @@ function getMovies(searchQuery,page){
 
         const genreApi=api.get(`/genre/movie/list?api_key=${API_KEY}&language=en`)
 
-        const searchApi=api.get(`/search/movie?query=${searchQuery}&api_key=${API_KEY}include_adult=false&language=en-US&page=${page}`)
+        const searchApi=api.get(`/search/movie?query=${searchQuery}&api_key=${API_KEY}&include_adult=false&language=en-US&page=${page}`)
 
         let [ popularMovies,topRatedMovies,upcomingMovies,genres,searchMovies ] = await Promise.all( [ popularMovieApi,TopRatedMovieApi,UpcomingMovieApi,genreApi,searchApi ] )
 
