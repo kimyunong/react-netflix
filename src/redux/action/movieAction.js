@@ -1,7 +1,7 @@
 import api from "../api";
 import { movieActions } from "../reducers/movieReducer";
 
-const API_KEY=process.env.REACT_APP_API_KEY  // "REACT_APP" 이 반드시 들어가야 한다 
+const API_KEY=process.env.REACT_APP_API_KEY
 
 function getMovies(searchQuery,page){
 
@@ -11,13 +11,13 @@ function getMovies(searchQuery,page){
 
         try{
 
-        const popularMovieApi=api.get(`/movie/popular?api_key=${API_KEY}language=en-US&page=${page}`)
+        const popularMovieApi=api.get(`/movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`)
 
-        const TopRatedMovieApi=api.get(`/movie/top_rated?api_key=${API_KEY}language=en-US&page=${page}`)
+        const TopRatedMovieApi=api.get(`/movie/top_rated?api_key=${API_KEY}&language=en-US&page=${page}`)
 
-        const UpcomingMovieApi=api.get(`/movie/upcoming?api_key=${API_KEY}language=en-US&page=${page}`)
+        const UpcomingMovieApi=api.get(`/movie/upcoming?api_key=${API_KEY}&language=en-US&page=${page}`)
 
-        const genreApi=api.get(`/genre/movie/list?api_key=${API_KEY}language=en`)
+        const genreApi=api.get(`/genre/movie/list?api_key=${API_KEY}&language=en`)
 
         const searchApi=api.get(`/search/movie?query=${searchQuery}&api_key=${API_KEY}include_adult=false&language=en-US&page=${page}`)
 
@@ -46,15 +46,15 @@ function getMovieDetail(id){
 
         try{
 
-            const MovieDetailApi=api.get(`/movie/${id}?api_key=${API_KEY}language=en`)
+            const MovieDetailApi=api.get(`/movie/${id}?api_key=${API_KEY}&language=en`)
 
-            const genreApi=api.get(`/genre/movie/list?api_key=${API_KEY}language=en`)
+            const genreApi=api.get(`/genre/movie/list?api_key=${API_KEY}&language=en`)
 
-            const reviewsApi=api.get(`/movie/${id}/reviews?api_key=${API_KEY}language=en`)
+            const reviewsApi=api.get(`/movie/${id}/reviews?api_key=${API_KEY}&language=en`)
 
-            const videosApi=api.get(`/movie/${id}/videos?api_key=${API_KEY}language=en-US`)
+            const videosApi=api.get(`/movie/${id}/videos?api_key=${API_KEY}&language=en-US`)
 
-            const relatedApi=api.get(`/movie/${id}/recommendations?api_key=${API_KEY}language=en-US&page=1`)
+            const relatedApi=api.get(`/movie/${id}/recommendations?api_key=${API_KEY}&language=en-US&page=1`)
     
             let [ MovieDetails,genres,reviews,videos,related ] = await Promise.all( [ MovieDetailApi,genreApi,reviewsApi,videosApi,relatedApi ] )
     
