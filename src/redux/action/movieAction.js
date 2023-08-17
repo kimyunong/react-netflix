@@ -1,7 +1,7 @@
 import api from "../api";
 import { movieActions } from "../reducers/movieReducer";
 
-const API_KEY=process.env.REACT_APP_API_KEY
+const API_KEY=process.env.REACT_APP_API_KEY;
 
 function getMovies(searchQuery,page){
 
@@ -36,7 +36,7 @@ function getMovies(searchQuery,page){
         }catch(error){
             // 에러 핸들링
         }
-
+ 
     }    
 }
 

@@ -42,7 +42,7 @@ const Navigation = ({changeFunc}) => {
      <Navbar style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }} variant="dark" expand="lg">
       <Container fluid>
 
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="https://rabis-netflix.netlify.app/">
             <img style={{borderRadius:'10px'}} width={140} src='https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png'/>
         </Navbar.Brand>
 

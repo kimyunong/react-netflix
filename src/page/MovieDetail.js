@@ -70,7 +70,7 @@ const MovieDetail = () => {
 
           <div style={{width:'90%'}}>
 
-          <div style={{marginTop:'10px',display:'flex'}}>
+          <div style={{marginTop:'10px',display:'flex',flexWrap:'wrap'}}>
             {movies && movies.genres && movies.genres.map(item=><div className='genre-box'>{item.name}</div>)}
           </div>
 
