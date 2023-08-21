@@ -117,7 +117,6 @@ const Movies = ({resetQuery}) => {
       const filteredResults = menuList.results.filter((item) => {
         const rangeNum = Math.floor(item.vote_average);
         const genreNum = item.genre_ids.includes(selectedGenre);
-        console.log("레인지넘버 : ",rangeNum);
 
         if(selectedGenre ==0){
           return rangeNum >= minValue && rangeNum <= maxValue;
