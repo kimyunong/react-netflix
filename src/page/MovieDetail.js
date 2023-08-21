@@ -38,12 +38,10 @@ const MovieDetail = () => {
   }
 
   const leftButton=()=>{
-    console.log("레프트",lineChange)
     setLineChange(0);
   }
 
   const rightButton=()=>{
-    console.log("라이트",setLineChange)
     setLineChange(1);
   }
 

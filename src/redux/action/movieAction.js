@@ -5,8 +5,7 @@ const API_KEY=process.env.REACT_APP_API_KEY;
 
 function getMovies(searchQuery,page){
 
-    console.log("서치",searchQuery,"페이지",page);
-
+   
     return async(dispatch)=>{
 
         try{

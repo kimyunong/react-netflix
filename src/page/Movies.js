@@ -33,7 +33,6 @@ const Movies = ({resetQuery}) => {
 
   const dispatch = useDispatch();
 
-  console.log("필터 :",filteredMovies);
 
   const handleGenreClick = (genreId)=>{
     resetAllQuery();
@@ -76,14 +75,6 @@ const Movies = ({resetQuery}) => {
     setIsOpen(!isOpen);
   }
   
-
-  console.log("무비페이지",popularMovies,topRatedMovies,upcomingMovies);
-  console.log("서치페이지",searchMovies);
-  console.log("쿼리 :",searchQuery);
-  console.log("페이지",page,"총페이지",totalPages);
-  console.log("메뉴텍스트",menutext);
-  console.log("장르",genres);
-
 
   useEffect(()=>{
   
